@@ -1,0 +1,482 @@
+<!DOCTYPE html><html class="dark" lang="zh-TW"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>一丸老麵 | 冷凍宅配 - 職人美味在家享用</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Noto+Sans+TC:wght@400;500;700&amp;family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#484645",
+                        "primary-container": "#121212",
+                        "outline-variant": "#444748",
+                        "surface-variant": "#353434",
+                        "surface-container": "#201f1f",
+                        "secondary": "#e3bfb2",
+                        "surface-container-high": "#2b2a2a",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "background": "#141313",
+                        "on-secondary-fixed": "#2a170f",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-tertiary": "#32302f",
+                        "error": "#ffb4ab",
+                        "on-secondary-fixed-variant": "#5a4137",
+                        "tertiary": "#cac6c3",
+                        "primary-fixed": "#e5e2e1",
+                        "on-tertiary-container": "#807d7b",
+                        "tertiary-container": "#131211",
+                        "on-primary-fixed-variant": "#474646",
+                        "on-secondary": "#422b22",
+                        "surface-container-highest": "#353434",
+                        "surface": "#141313",
+                        "inverse-surface": "#e5e2e1",
+                        "tertiary-fixed": "#e6e1df",
+                        "surface-bright": "#3a3939",
+                        "on-tertiary-fixed": "#1c1b1a",
+                        "inverse-primary": "#5f5e5e",
+                        "surface-dim": "#141313",
+                        "on-primary": "#313030",
+                        "on-surface-variant": "#c4c7c7",
+                        "on-error-container": "#ffdad6",
+                        "error-container": "#93000a",
+                        "on-primary-container": "#7e7d7d",
+                        "outline": "#8e9192",
+                        "surface-container-low": "#1c1b1b",
+                        "inverse-on-surface": "#313030",
+                        "on-background": "#e5e2e1",
+                        "on-surface": "#e5e2e1",
+                        "on-primary-fixed": "#1c1b1b",
+                        "secondary-fixed-dim": "#e3bfb2",
+                        "surface-tint": "#c8c6c5",
+                        "primary": "#c8c6c5",
+                        "tertiary-fixed-dim": "#cac6c3",
+                        "on-secondary-container": "#d4b1a4",
+                        "on-error": "#690005",
+                        "warm-yellow": "#FBBF24"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1440px",
+                        "stack-md": "16px",
+                        "stack-lg": "32px",
+                        "stack-sm": "8px",
+                        "section-gap": "128px",
+                        "margin": "80px",
+                        "gutter": "32px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Montserrat", "Poppins", "Noto Sans TC", "sans-serif"],
+                        "label-lg": ["Montserrat", "Poppins", "Noto Sans TC", "sans-serif"],
+                        "label-sm": ["Montserrat", "Poppins", "Noto Sans TC", "sans-serif"],
+                        "headline-lg": ["Montserrat", "Poppins", "Noto Sans TC", "sans-serif"],
+                        "body-md": ["Noto Sans TC", "Poppins", "sans-serif"],
+                        "body-lg": ["Noto Sans TC", "Poppins", "sans-serif"],
+                        "headline-md": ["Montserrat", "Poppins", "Noto Sans TC", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["80px", {"lineHeight": "96px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "32px", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Noto Sans TC', 'Poppins', sans-serif !important;
+            background-color: #141313;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #141313; }
+        ::-webkit-scrollbar-thumb { background: #444748; }
+        
+        .nav-link-hover {
+            position: relative;
+        }
+        .nav-link-hover::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: #e3bfb2;
+            transition: width 0.3s ease;
+        }
+        .nav-link-hover:hover::after {
+            width: 100%;
+        }
+
+        .backdrop-blur-xl { backdrop-filter: blur(24px); }
+        .backdrop-blur-2xl { backdrop-filter: blur(40px); }
+
+        /* Nav Item Animation Stagger */
+        .nav-stagger > * {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .menu-active .nav-stagger > * {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .menu-active .nav-stagger > *:nth-child(1) { transition-delay: 100ms; }
+        .menu-active .nav-stagger > *:nth-child(2) { transition-delay: 200ms; }
+        .menu-active .nav-stagger > *:nth-child(3) { transition-delay: 300ms; }
+        .menu-active .nav-stagger > *:nth-child(4) { transition-delay: 400ms; }
+        .menu-active .nav-stagger > *:nth-child(5) { transition-delay: 500ms; }
+        .menu-active .nav-stagger > *:nth-child(6) { transition-delay: 600ms; }
+        .menu-active .nav-stagger > *:nth-child(7) { transition-delay: 700ms; }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-background selection:bg-secondary selection:text-on-secondary">
+<!-- Full-screen Overlay Menu (SideNavBar) -->
+<div class="fixed inset-0 z-[100] w-full h-full bg-background/98 backdrop-blur-2xl transition-all duration-700 ease-in-out opacity-0 pointer-events-none" id="side-navbar">
+<div class="absolute top-8 right-margin">
+<button class="text-on-surface hover:text-secondary transition-colors" onclick="toggleMenu()">
+<span class="material-symbols-outlined text-4xl">close</span>
+</button>
+</div>
+<div class="flex flex-col items-center justify-center h-full space-y-stack-lg px-margin">
+<div class="text-center mb-16 nav-stagger">
+<h2 class="font-display-lg text-display-lg text-on-surface tracking-tighter uppercase mb-2">一丸老麵</h2>
+<p class="font-label-lg text-label-lg text-secondary uppercase tracking-[0.4em]">Crafted Midnight Ramen</p>
+</div>
+<nav class="flex flex-col items-center space-y-10 nav-stagger">
+<a class="group relative flex flex-col items-center" href="index.html">
+<span class="font-label-sm text-label-sm text-secondary opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-y-2 group-hover:translate-y-0 uppercase tracking-widest">Home</span>
+<span class="font-headline-lg text-headline-lg text-on-surface group-hover:text-secondary transition-colors duration-300">首頁</span>
+</a>
+<a class="group relative flex flex-col items-center" href="about.html">
+<span class="font-label-sm text-label-sm text-secondary opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-y-2 group-hover:translate-y-0 uppercase tracking-widest">Story</span>
+<span class="font-headline-lg text-headline-lg text-on-surface group-hover:text-secondary transition-colors duration-300">品牌故事</span>
+</a>
+<a class="group relative flex flex-col items-center" href="menu.html">
+<span class="font-label-sm text-label-sm text-secondary opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-y-2 group-hover:translate-y-0 uppercase tracking-widest">Selection</span>
+<span class="font-headline-lg text-headline-lg text-on-surface group-hover:text-secondary transition-colors duration-300">精選菜單</span>
+</a>
+<a class="group relative flex flex-col items-center" href="ship.html">
+<span class="font-label-sm text-label-sm text-secondary opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-y-2 group-hover:translate-y-0 uppercase tracking-widest">Shipping</span>
+<span class="font-headline-lg text-headline-lg text-secondary">冷凍宅配</span>
+</a>
+<a class="group relative flex flex-col items-center" href="store.html">
+<span class="font-label-sm text-label-sm text-secondary opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-y-2 group-hover:translate-y-0 uppercase tracking-widest">Location</span>
+<span class="font-headline-lg text-headline-lg text-on-surface group-hover:text-secondary transition-colors duration-300">門市資訊</span>
+</a>
+<a class="group relative flex flex-col items-center" href="deliver.html">
+<span class="font-label-sm text-label-sm text-secondary opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-y-2 group-hover:translate-y-0 uppercase tracking-widest">Delivery</span>
+<span class="font-headline-lg text-headline-lg text-on-surface group-hover:text-secondary transition-colors duration-300">外送服務</span>
+</a>
+</nav>
+</div>
+</div>
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl border-b border-outline-variant/10 shadow-sm transition-all duration-300">
+<div class="flex justify-between items-center h-20 px-margin max-w-container-max mx-auto">
+<div class="flex items-center gap-8">
+<a class="font-display-lg text-headline-md tracking-tighter text-on-surface uppercase hover:text-secondary transition-colors" href="index.html">一丸老麵</a>
+<nav class="hidden md:flex items-center space-x-8 font-label-lg text-label-lg">
+<a class="text-on-surface hover:text-secondary nav-link-hover transition-colors" href="index.html">首頁</a>
+<a class="text-on-surface hover:text-secondary nav-link-hover transition-colors" href="about.html">品牌故事</a>
+<a class="text-on-surface hover:text-secondary nav-link-hover transition-colors" href="menu.html">精選菜單</a>
+<a class="text-secondary border-b border-secondary pb-1" href="ship.html">冷凍宅配</a>
+<a class="text-on-surface hover:text-secondary nav-link-hover transition-colors" href="store.html">門市資訊</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined cursor-pointer text-on-surface hover:text-secondary transition-colors text-2xl">shopping_cart</span>
+<button class="text-on-surface hover:text-secondary transition-colors" onclick="toggleMenu()">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-margin pt-20">
+<!-- Hero Section -->
+<section class="mt-section-gap flex flex-col md:flex-row items-center gap-gutter">
+<div class="w-full md:w-1/2 space-y-stack-lg">
+<div class="inline-block border border-secondary text-secondary px-4 py-1 text-label-sm font-medium tracking-[0.2em] uppercase">
+                Ichimaru At Home
+            </div>
+<h1 class="font-display-lg text-display-lg text-on-background leading-tight">
+                職人美味<br><span class="text-secondary">在家享用</span>
+</h1>
+<p class="text-body-lg text-on-surface-variant max-w-lg leading-relaxed">
+                將一丸老麵的靈魂封存，透過急速冷凍技術，將職人堅持的彈牙口感與濃郁湯頭，原封不動地送到您的餐桌。
+            </p>
+<div class="pt-stack-md">
+<button class="bg-primary text-on-primary px-12 py-4 font-label-lg hover:bg-secondary hover:text-on-secondary transition-all active:scale-95">
+                    立即訂購
+                </button>
+</div>
+</div>
+<div class="w-full md:w-1/2 relative group">
+<div class="aspect-[16/10] bg-surface-container-high overflow-hidden rounded-lg shadow-2xl">
+<img alt="Ichimaru Frozen Ramen Package" class="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ1Q8r8sqq-k1p7POrqDEe1sTnWivF1_LVAAgFCOZl7qCyqyz4Nt9FutcG4u54ll8xwzFbg7ek7SnYysko8bi3S-8i0K4xVqoxab122FWIRc1XnI0bllf6XvQnTjf02KVBglYU0GPpYxMHF8LF22B8wcVg7yXDBkBugcURtG6zPSUOhNciFNv-z4VmRzKSK6E4RBbwh7K3kRslmxw7K32erYBfCYpJykVJXV9ZX0FdXopELJF_Jj_jEzkdx7nsiNUVdFw7gAeU7fp3Keg">
+</div>
+<div class="absolute -bottom-8 -left-8 bg-surface-container-highest p-8 border border-outline-variant/30 hidden md:block shadow-2xl">
+<p class="font-headline-md text-headline-md text-secondary">冷凍專送</p>
+<p class="font-label-sm text-on-surface-variant uppercase tracking-[0.3em] mt-1">Frozen Delivery</p>
+</div>
+</div>
+</section>
+<!-- Product List -->
+<section class="mt-section-gap">
+<div class="text-center mb-16">
+<h2 class="font-display-lg text-headline-lg text-on-background mb-4">一丸老麵料理湯包系列</h2>
+<p class="text-on-surface-variant font-label-lg">內容物：拉麵、湯頭、叉燒</p>
+<div class="w-12 h-0.5 bg-secondary mx-auto mt-6"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Ramen Item Cards -->
+<div class="bg-surface-container-low border border-outline-variant/20 p-8 flex justify-between items-center hover:bg-surface-container transition-all cursor-pointer group rounded-lg">
+<div>
+<h3 class="font-headline-sm text-xl text-on-surface group-hover:text-secondary transition-colors">原味豚骨拉麵</h3>
+<p class="text-label-sm text-on-surface-variant mt-1">經典職人熬製湯頭</p>
+</div>
+<span class="text-secondary font-display-lg text-xl">＄110 <span class="text-sm opacity-60">/ 入</span></span>
+</div>
+<div class="bg-surface-container-low border border-outline-variant/20 p-8 flex justify-between items-center hover:bg-surface-container transition-all cursor-pointer group rounded-lg">
+<div>
+<h3 class="font-headline-sm text-xl text-on-surface group-hover:text-secondary transition-colors">泡菜豚骨拉麵</h3>
+<p class="text-label-sm text-on-surface-variant mt-1">微酸辛口層次感</p>
+</div>
+<span class="text-secondary font-display-lg text-xl">＄120 <span class="text-sm opacity-60">/ 入</span></span>
+</div>
+<div class="bg-surface-container-low border border-outline-variant/20 p-8 flex justify-between items-center hover:bg-surface-container transition-all cursor-pointer group rounded-lg">
+<div>
+<h3 class="font-headline-sm text-xl text-on-surface group-hover:text-secondary transition-colors">味噌豚骨拉麵</h3>
+<p class="text-label-sm text-on-surface-variant mt-1">濃郁厚實味噌香</p>
+</div>
+<span class="text-secondary font-display-lg text-xl">＄130 <span class="text-sm opacity-60">/ 入</span></span>
+</div>
+<div class="bg-surface-container-low border border-outline-variant/20 p-8 flex justify-between items-center hover:bg-surface-container transition-all cursor-pointer group rounded-lg">
+<div>
+<h3 class="font-headline-sm text-xl text-on-surface group-hover:text-secondary transition-colors">醬油豚骨拉麵</h3>
+<p class="text-label-sm text-on-surface-variant mt-1">清爽不膩口風味</p>
+</div>
+<span class="text-secondary font-display-lg text-xl">＄130 <span class="text-sm opacity-60">/ 入</span></span>
+</div>
+<div class="bg-surface-container-low border border-outline-variant/20 p-8 flex justify-between items-center hover:bg-surface-container transition-all cursor-pointer group rounded-lg">
+<div>
+<h3 class="font-headline-sm text-xl text-on-surface group-hover:text-secondary transition-colors">激辛豚骨拉麵</h3>
+<p class="text-label-sm text-on-surface-variant mt-1">挑戰味蕾極限辣味</p>
+</div>
+<span class="text-secondary font-display-lg text-xl">＄140 <span class="text-sm opacity-60">/ 入</span></span>
+</div>
+<div class="bg-surface-container-low border border-outline-variant/20 p-8 flex justify-between items-center hover:bg-surface-container transition-all cursor-pointer relative overflow-hidden group rounded-lg">
+<div class="absolute top-0 right-0 bg-secondary text-on-secondary px-3 py-0.5 text-[10px] font-bold tracking-widest uppercase">Limited</div>
+<div>
+<h3 class="font-headline-sm text-xl text-on-surface group-hover:text-secondary transition-colors">奶味豚骨拉麵</h3>
+<p class="text-label-sm text-on-surface-variant mt-1">絲滑醇厚奶香</p>
+</div>
+<span class="text-secondary font-display-lg text-xl">＄140 <span class="text-sm opacity-60">/ 入</span></span>
+</div>
+</div>
+<!-- Add-ons -->
+<div class="mt-gutter bg-surface-container-low p-10 border border-outline-variant/20 rounded-lg">
+<h3 class="font-headline-md text-2xl text-on-surface mb-8 flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">add_circle</span>
+                美味加購專區
+            </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-6">
+<div class="flex justify-between items-center border-b border-outline-variant/20 pb-4">
+<span class="text-lg font-medium text-on-surface">麵條 (單包)</span>
+<span class="text-secondary font-display-lg text-xl">＄20</span>
+</div>
+<div class="flex justify-between items-center border-b border-outline-variant/20 pb-4">
+<span class="text-lg font-medium text-on-surface">叉燒 (每份 4 片)</span>
+<span class="text-secondary font-display-lg text-xl">＄100</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Cooking Instructions -->
+<section class="mt-section-gap">
+<div class="text-center mb-16">
+<h2 class="font-display-lg text-headline-lg text-on-background mb-4">烹煮方式指南</h2>
+<p class="text-on-surface-variant font-label-sm tracking-[0.4em] uppercase">Cooking Instructions</p>
+<div class="w-12 h-0.5 bg-secondary mx-auto mt-6"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+<div class="bg-surface-container-low p-10 space-y-8 border border-outline-variant/20 rounded-lg">
+<div class="flex items-center gap-6">
+<span class="w-12 h-12 flex items-center justify-center border border-secondary text-secondary font-display-lg text-xl">01</span>
+<h3 class="font-headline-sm text-2xl text-on-surface">標準煮法</h3>
+</div>
+<ul class="space-y-6 text-on-surface-variant">
+<li class="flex gap-4">
+<span class="text-secondary font-bold">●</span>
+<p>麵條放進浸煮滾的水中，水再度滾後，計時 <span class="text-on-surface font-bold">2 分鐘</span> 左右即可。</p>
+</li>
+<li class="flex gap-4">
+<span class="text-secondary font-bold">●</span>
+<p>將冷凍湯包倒進湯鍋 <span class="text-on-surface font-bold">加點水</span>，煮滾後放進麵條、叉燒即可。</p>
+</li>
+</ul>
+</div>
+<div class="bg-surface-container-low p-10 space-y-8 border border-dashed border-outline-variant/40 rounded-lg">
+<div class="flex items-center gap-6">
+<span class="w-12 h-12 flex items-center justify-center border border-on-surface-variant text-on-surface-variant font-display-lg text-xl">02</span>
+<h3 class="font-headline-sm text-2xl text-on-surface">懶人煮法</h3>
+</div>
+<div class="bg-surface-container p-6 rounded-lg">
+<p class="text-on-surface-variant leading-relaxed">
+                        湯鍋加 <span class="text-secondary font-bold">100cc 水</span>，丟入湯包煮滾，直接丟入麵條煮 <span class="text-secondary font-bold">2 分鐘</span>，最後加入叉燒。
+                    </p>
+</div>
+<div class="text-on-surface-variant/60 italic text-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">timer</span>
+                    全程只需不到 5 分鐘即可享用職人級美味
+                </div>
+</div>
+</div>
+<div class="mt-12 bg-surface-container-high/50 p-8 flex items-center gap-6 border-l-2 border-secondary rounded-r-lg">
+<span class="material-symbols-outlined text-4xl text-secondary">lightbulb</span>
+<div>
+<p class="font-label-lg text-secondary mb-1">美味加分 Chef's Tip</p>
+<p class="text-on-surface-variant">建議加入蔥花、玉米、洋蔥絲或溫泉蛋，更能還原店內職人風味。湯頭加水比例可依個人喜好微調。</p>
+</div>
+</div>
+</section>
+<!-- Shipping Info -->
+<section class="my-section-gap">
+<div class="bg-surface-container-lowest border border-outline-variant/10 p-12 md:p-20 rounded-xl overflow-hidden relative shadow-2xl">
+<div class="absolute top-0 right-0 w-96 h-96 bg-secondary/5 rounded-full -mr-48 -mt-48 blur-3xl"></div>
+<div class="flex flex-col lg:flex-row items-center lg:items-start gap-16 relative z-10">
+<div class="w-full lg:w-1/4">
+<div class="bg-surface-container-highest p-10 text-center border border-outline-variant/30 rounded-lg">
+<span class="material-symbols-outlined text-5xl text-secondary mb-4">local_shipping</span>
+<h3 class="font-display-lg text-2xl text-on-surface">配送資訊</h3>
+<p class="font-label-sm text-secondary mt-2 tracking-widest uppercase">Shipping Info</p>
+</div>
+</div>
+<div class="w-full lg:w-3/4 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+<div class="space-y-3">
+<h4 class="font-label-lg text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">inventory_2</span> 宅配箱數
+                        </h4>
+<p class="text-on-surface-variant opacity-80">
+                            每一箱加收 50 元 (可裝 10-20 入)，超過部分將裝入第二箱計算。
+                        </p>
+</div>
+<div class="space-y-3">
+<h4 class="font-label-lg text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">ac_unit</span> 冷凍宅配費用
+                        </h4>
+<p class="text-on-surface-variant opacity-80">
+                            運費 $225 + 箱子費用 $50 = <span class="text-secondary font-bold">$275 / 箱</span>。
+                        </p>
+</div>
+<div class="space-y-3">
+<h4 class="font-label-lg text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">storefront</span> 門市自取
+                        </h4>
+<p class="text-on-surface-variant opacity-80">
+                            歡迎自取省下運費，自取可不使用保麗龍箱。請先透過官方 LINE 預約。
+                        </p>
+</div>
+<div class="space-y-3">
+<h4 class="font-label-lg text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">local_post_office</span> 711/全家 店到店
+                        </h4>
+<p class="text-on-surface-variant opacity-80">
+                            支援冷凍店到店配送。運費依超商當季活動計算，結帳時選擇指定門市。
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-section-gap pb-stack-lg bg-surface-container-lowest border-t border-secondary/20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1 space-y-6">
+<div class="font-display-lg text-headline-md text-on-surface">一丸老麵</div>
+<p class="text-on-surface-variant font-body-md leading-relaxed">
+                傳承職人精神的深夜食堂，致力於將最純粹的拉麵靈魂分享給每一位食客。
+            </p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-on-surface-variant hover:text-secondary cursor-pointer transition-colors">facebook</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-secondary cursor-pointer transition-colors">camera_alt</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-secondary cursor-pointer transition-colors">mail</span>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-lg text-secondary uppercase tracking-widest">Store Info</h4>
+<ul class="space-y-2 text-on-surface-variant">
+<li><a class="hover:text-secondary transition-colors" href="store.html">門市資訊</a></li>
+<li><a class="hover:text-secondary transition-colors" href="about.html">關於我們</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">職人故事</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-lg text-secondary uppercase tracking-widest">Services</h4>
+<ul class="space-y-2 text-on-surface-variant">
+<li><a class="hover:text-secondary transition-colors" href="ship.html">冷凍宅配</a></li>
+<li><a class="hover:text-secondary transition-colors" href="deliver.html">外送平台</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">隱私政策</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-lg text-secondary uppercase tracking-widest">Contact</h4>
+<p class="text-on-surface-variant">台中市某某區某某路123號</p>
+<p class="text-on-surface-variant">04-1234-5678</p>
+<p class="text-on-surface-variant">info@ichimaru.com</p>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin mt-16 pt-8 border-t border-outline-variant/10 text-center text-on-surface-variant opacity-60 text-sm">
+        © 2024 Ichimaru Ramen Bar. Artisanal Excellence. All Rights Reserved.
+    </div>
+</footer>
+<script>
+    function toggleMenu() {
+      const menu = document.getElementById('side-navbar');
+      const isHidden = menu.classList.contains('opacity-0');
+      
+      if (isHidden) {
+        menu.classList.remove('opacity-0', 'pointer-events-none');
+        menu.classList.add('opacity-100', 'pointer-events-auto', 'menu-active');
+        document.body.style.overflow = 'hidden';
+      } else {
+        menu.classList.add('opacity-0', 'pointer-events-none');
+        menu.classList.remove('opacity-100', 'pointer-events-auto', 'menu-active');
+        document.body.style.overflow = '';
+      }
+    }
+
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (window.scrollY > 50) {
+            header.classList.add('shadow-md');
+            header.classList.add('py-2');
+            header.querySelector('.px-margin').classList.replace('h-20', 'h-16');
+        } else {
+            header.classList.remove('shadow-md');
+            header.classList.remove('py-2');
+            header.querySelector('.px-margin').classList.replace('h-16', 'h-20');
+        }
+    });
+</script>
+</body></html>

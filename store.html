@@ -1,0 +1,337 @@
+<!DOCTYPE html><html class="dark" lang="zh-TW" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>門市資訊 - 一丸老麵</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Noto+Sans+TC:wght@400;500;700&amp;family=Poppins:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary-fixed-variant": "#484645",
+            "primary-container": "#121212",
+            "outline-variant": "#444748",
+            "surface-variant": "#353434",
+            "surface-container": "#201f1f",
+            "secondary": "#e3bfb2",
+            "surface-container-high": "#2b2a2a",
+            "primary-fixed-dim": "#c8c6c5",
+            "background": "#141313",
+            "on-secondary-fixed": "#2a170f",
+            "surface-container-lowest": "#0e0e0e",
+            "on-tertiary": "#32302f",
+            "error": "#ffb4ab",
+            "on-secondary-fixed-variant": "#5a4137",
+            "tertiary": "#cac6c3",
+            "primary-fixed": "#e5e2e1",
+            "on-tertiary-container": "#807d7b",
+            "tertiary-container": "#131211",
+            "on-primary-fixed-variant": "#474646",
+            "on-secondary": "#422b22",
+            "surface-container-highest": "#353434",
+            "secondary-container": "#5d4339",
+            "secondary-fixed": "#ffdbce",
+            "surface": "#141313",
+            "inverse-surface": "#e5e2e1",
+            "tertiary-fixed": "#e6e1df",
+            "surface-bright": "#3a3939",
+            "on-tertiary-fixed": "#1c1b1a",
+            "inverse-primary": "#5f5e5e",
+            "surface-dim": "#141313",
+            "on-primary": "#313030",
+            "on-surface-variant": "#c4c7c7",
+            "on-error-container": "#ffdad6",
+            "error-container": "#93000a",
+            "on-primary-container": "#7e7d7d",
+            "outline": "#8e9192",
+            "surface-container-low": "#1c1b1b",
+            "inverse-on-surface": "#313030",
+            "on-background": "#e5e2e1",
+            "on-surface": "#e5e2e1",
+            "on-primary-fixed": "#1c1b1b",
+            "secondary-fixed-dim": "#e3bfb2",
+            "surface-tint": "#c8c6c5",
+            "primary": "#c8c6c5",
+            "tertiary-fixed-dim": "#cac6c3",
+            "on-secondary-container": "#d4b1a4",
+            "on-error": "#690005"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "container-max": "1440px",
+            "stack-md": "16px",
+            "stack-lg": "32px",
+            "stack-sm": "8px",
+            "section-gap": "128px",
+            "margin": "80px",
+            "gutter": "32px"
+          },
+          "fontFamily": {
+            "display-lg": ["Montserrat", "Noto Sans TC", "sans-serif"],
+            "label-lg": ["Poppins", "Noto Sans TC", "sans-serif"],
+            "label-sm": ["Poppins", "Noto Sans TC", "sans-serif"],
+            "headline-lg": ["Montserrat", "Noto Sans TC", "sans-serif"],
+            "body-md": ["Noto Sans TC", "sans-serif"],
+            "body-lg": ["Noto Sans TC", "sans-serif"],
+            "headline-md": ["Montserrat", "Noto Sans TC", "sans-serif"]
+          },
+          "fontSize": {
+            "display-lg": ["80px", {"lineHeight": "96px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+            "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+            "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "600"}],
+            "body-md": ["16px", {"lineHeight": "28px", "fontWeight": "400"}],
+            "body-lg": ["18px", {"lineHeight": "32px", "fontWeight": "400"}],
+            "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Noto Sans TC', 'Poppins', sans-serif;
+      min-height: 100vh;
+      width: 100%;
+      max-width: 1920px;
+      margin: 0 auto;
+      overflow-x: hidden;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .backdrop-blur-xl { backdrop-filter: blur(24px); }
+    .backdrop-blur-2xl { backdrop-filter: blur(40px); }
+
+    /* Nav Item Animation Stagger */
+    .nav-stagger > * {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .menu-active .nav-stagger > * {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .menu-active .nav-stagger > *:nth-child(1) { transition-delay: 100ms; }
+    .menu-active .nav-stagger > *:nth-child(2) { transition-delay: 200ms; }
+    .menu-active .nav-stagger > *:nth-child(3) { transition-delay: 300ms; }
+    .menu-active .nav-stagger > *:nth-child(4) { transition-delay: 400ms; }
+    .menu-active .nav-stagger > *:nth-child(5) { transition-delay: 500ms; }
+    .menu-active .nav-stagger > *:nth-child(6) { transition-delay: 600ms; }
+  </style>
+</head>
+<body class="bg-background text-on-background selection:bg-secondary/30" style="overflow: hidden;">
+<!-- Full-screen Overlay Menu (SideNavBar) -->
+<div class="fixed inset-0 z-[100] w-full h-full bg-background/98 backdrop-blur-2xl transition-all duration-700 ease-in-out opacity-100 pointer-events-auto menu-active" id="side-navbar">
+<div class="absolute top-8 right-margin">
+<button class="text-on-surface hover:text-secondary transition-colors" onclick="toggleMenu()">
+<span class="material-symbols-outlined text-4xl">close</span>
+</button>
+</div>
+<div class="flex flex-col items-center justify-center h-full space-y-stack-lg px-margin">
+<div class="text-center mb-16 nav-stagger">
+<h2 class="font-display-lg text-display-lg text-on-surface tracking-tighter uppercase mb-2">一丸老麵</h2>
+<p class="font-label-lg text-label-lg text-secondary uppercase tracking-[0.4em]">Crafted Midnight Ramen</p>
+</div>
+<nav class="flex flex-col items-center space-y-10 nav-stagger"><a class="group relative flex flex-col items-center" href="index.html"><span class="font-label-sm text-label-sm text-secondary opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-y-2 group-hover:translate-y-0 uppercase tracking-widest">Home</span><span class="font-headline-lg text-headline-lg text-on-surface group-hover:text-secondary transition-colors duration-300">首頁</span></a><a class="group relative flex flex-col items-center" href="about.html"><span class="font-label-sm text-label-sm text-secondary opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-y-2 group-hover:translate-y-0 uppercase tracking-widest">Story</span><span class="font-headline-lg text-headline-lg text-on-surface group-hover:text-secondary transition-colors duration-300">品牌故事</span></a><a class="group relative flex flex-col items-center" href="menu.html"><span class="font-label-sm text-label-sm text-secondary opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-y-2 group-hover:translate-y-0 uppercase tracking-widest">Menu</span><span class="font-headline-lg text-headline-lg text-on-surface group-hover:text-secondary transition-colors duration-300">菜單</span></a><a class="group relative flex flex-col items-center" href="ship.html"><span class="font-label-sm text-label-sm text-secondary opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-y-2 group-hover:translate-y-0 uppercase tracking-widest">Shipping</span><span class="font-headline-lg text-headline-lg text-on-surface group-hover:text-secondary transition-colors duration-300">冷凍宅配</span></a><a class="group relative flex flex-col items-center" href="store.html"><span class="font-label-sm text-label-sm text-secondary opacity-100 transition-all duration-300 uppercase tracking-widest">Location</span><span class="font-headline-lg text-headline-lg text-secondary">門市資訊</span></a><a class="group relative flex flex-col items-center" href="deliver.html"><span class="font-label-sm text-label-sm text-secondary opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-y-2 group-hover:translate-y-0 uppercase tracking-widest">Delivery</span><span class="font-headline-lg text-headline-lg text-on-surface group-hover:text-secondary transition-colors duration-300">外送</span></a></nav>
+</div>
+</div>
+<!-- Sticky Navbar (TopNavBar) -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl border-b border-outline-variant/10 shadow-sm transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center h-20 px-margin max-w-container-max mx-auto">
+<div class="flex items-center">
+<a class="font-display-lg text-headline-md tracking-tighter text-on-surface uppercase hover:text-secondary transition-colors" href="index.html">一丸老麵</a>
+</div>
+<nav class="hidden lg:flex gap-12">
+<a class="font-label-lg text-label-lg text-on-surface hover:text-secondary after:content-[''] after:block after:h-px after:bg-secondary after:w-0 hover:after:w-full after:transition-all after:duration-300" href="index.html">HOME</a>
+<a class="font-label-lg text-label-lg text-on-surface hover:text-secondary after:content-[''] after:block after:h-px after:bg-secondary after:w-0 hover:after:w-full after:transition-all after:duration-300" href="about.html">STORY</a>
+<a class="font-label-lg text-label-lg text-on-surface hover:text-secondary after:content-[''] after:block after:h-px after:bg-secondary after:w-0 hover:after:w-full after:transition-all after:duration-300" href="menu.html">MENU</a>
+<a class="font-label-lg text-label-lg text-secondary border-b border-secondary pb-1" href="store.html">STORE</a>
+</nav>
+<div class="flex items-center gap-6">
+<button class="text-on-surface hover:text-secondary transition-colors" onclick="toggleMenu()">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-20 w-full max-w-container-max mx-auto">
+<!-- Hero Section -->
+<section class="grid grid-cols-12 gap-gutter px-margin py-section-gap items-stretch">
+<div class="col-span-12 lg:col-span-8 relative h-[600px] overflow-hidden group rounded-lg">
+<img class="w-full h-full object-cover grayscale-[0.2] transition-transform duration-1000 group-hover:scale-110" data-alt="A cinematic, low-angle shot of a traditional Japanese ramen shop exterior at twilight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB8xKYLvhHynlxuKmvaOjSWa8hCEJt541JXV3dVHITr213eL7XDJVHKMoQL6xhMpIgbqJyJ7fF1cwuO_-P1TuGWbFQ-ZkShV8PcbK_EIDQA52-S9pUS_SRCH7FzhrJFpefQHwB9itb4AbTLoA-u9H27qvDlkrbv_eA7KIhX32WVML-rWWwpy4_edawGchXs73oq9Kvhb7skz3spgHpvW1IUaFFTvGRgxk5JOy-31tB3XGVhPgKGDyGhVba4y-wHz_Je2eLFD-pRY58JFQ">
+<div class="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent pointer-events-none"></div>
+<div class="absolute bottom-12 left-12">
+<p class="font-label-lg text-label-lg text-secondary mb-4 uppercase tracking-[0.3em]">Only Location</p>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">匠心所在：台中店</h2>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-4 flex flex-col justify-center bg-surface-container-low p-12 border-l border-secondary/30 rounded-lg">
+<h3 class="font-headline-md text-headline-md text-secondary mb-6">門店氛圍</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-8">
+          走入一丸老麵，映入眼簾的是深青色的暖簾與樸實的木質桌椅。這裡不只是用餐的場所，更是職人展現技藝的舞台。我們在台中市南區福田二街，安靜地熬煮每一碗傳承自江戶精神的熟成老麵。
+        </p>
+<div class="flex flex-wrap gap-4">
+<span class="border border-outline-variant text-on-surface-variant px-4 py-2 font-label-sm text-label-sm uppercase tracking-widest rounded-sm">Hand-crafted</span>
+<span class="border border-outline-variant text-on-surface-variant px-4 py-2 font-label-sm text-label-sm uppercase tracking-widest rounded-sm">Artisan Spirit</span>
+<span class="border border-outline-variant text-on-surface-variant px-4 py-2 font-label-sm text-label-sm uppercase tracking-widest rounded-sm">Quiet Space</span>
+</div>
+</div>
+</section>
+<!-- Map & Info Grid -->
+<section class="grid grid-cols-12 gap-gutter px-margin pb-section-gap">
+<!-- Map Column -->
+<div class="col-span-12 xl:col-span-7 h-[700px] relative rounded-lg overflow-hidden border border-outline-variant/10">
+<div class="absolute inset-0 bg-surface-container-highest">
+<img class="w-full h-full object-cover opacity-60" data-alt="Map visualization showing the location of Ichimaru Ramen in Taichung." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9UAXU2sElJZbQ_HCCKBCIxSTiqrw9pQYnuDlPe2m6KNcsEZRwUqvOJBZZARtTPYb9phGjx48fs-BEicE6D1e_oI1K7GOpOGAFzjTRgi1b_xEUsEUkYn7nlA20AK5ZFwuheeSDhFlo-Y_gNmw8pmtfmgJdlwQSeHU_JnobTjjEUxfV7tgaBWeY5KrMvq1L7uw_TZdL7PB4XQlrCzjJOyyp0nzTHEtzJfbXInldUd1uQdK44Z7gtlO_jftp9_TLIM6FzFpzX3ezHre0">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-surface-container-high p-8 shadow-2xl flex items-center gap-6 border border-secondary/50 rounded-lg">
+<div class="w-16 h-16 bg-secondary flex items-center justify-center text-on-secondary rounded-lg">
+<span class="material-symbols-outlined text-3xl">restaurant</span>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm text-on-surface font-bold">一丸老麵 Ichimaru Ramen</p>
+<p class="font-body-lg text-body-lg text-on-surface-variant">台中市南區福田二街258號</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Info Column -->
+<div class="col-span-12 xl:col-span-5 flex flex-col gap-gutter">
+<!-- Business Hours -->
+<div class="bg-surface-container p-10 flex-1 rounded-lg border border-outline-variant/10">
+<div class="flex items-center gap-4 mb-8">
+<span class="material-symbols-outlined text-secondary text-3xl">schedule</span>
+<h4 class="font-headline-md text-headline-md text-on-surface">營業時間</h4>
+</div>
+<div class="grid grid-cols-2 gap-10 mb-10">
+<div class="space-y-3">
+<p class="font-label-lg text-label-lg text-secondary font-bold uppercase tracking-widest">週一</p>
+<p class="font-headline-sm text-headline-sm text-on-surface-variant">公休日</p>
+</div>
+<div class="space-y-3">
+<p class="font-label-lg text-label-lg text-on-surface font-bold uppercase tracking-widest">週二至週日</p>
+<div class="space-y-1">
+<p class="font-headline-sm text-headline-sm font-bold text-on-surface">11:30 – 14:00</p>
+<p class="font-headline-sm text-headline-sm font-bold text-on-surface">17:30 – 20:00</p>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-outline-variant/20 space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary">location_on</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface font-bold uppercase tracking-wider">門市地址</p>
+<p class="font-body-lg text-body-lg text-on-surface-variant">台中市南區福田二街258號</p>
+</div>
+</div>
+<button class="w-full bg-secondary text-on-secondary px-10 py-5 font-label-lg text-label-lg rounded-lg hover:brightness-110 transition-all shadow-lg uppercase tracking-widest">
+              開啟 Google 地圖
+            </button>
+</div>
+</div>
+<!-- Payment & Notes -->
+<div class="bg-surface-container-high p-10 flex-1 rounded-lg border border-outline-variant/10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<div>
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-secondary text-2xl">payments</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">支付方式</h4>
+</div>
+<ul class="space-y-4">
+<li class="flex items-center justify-between border-b border-outline-variant/10 pb-3">
+<span class="font-body-md text-body-md text-on-surface-variant">現金支付</span>
+<span class="material-symbols-outlined text-secondary text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</li>
+<li class="flex items-center justify-between border-b border-outline-variant/10 pb-3">
+<span class="font-body-md text-body-md text-on-surface-variant">信用卡</span>
+<span class="material-symbols-outlined text-secondary text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</li>
+<li class="flex items-center justify-between border-b border-outline-variant/10 pb-3">
+<span class="font-body-md text-body-md text-on-surface-variant">LINE Pay</span>
+<span class="material-symbols-outlined text-secondary text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</li>
+</ul>
+</div>
+<div>
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-secondary text-2xl">event_note</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">訂位說明</h4>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                為確保出餐品質，本店採現場候位制，暫不開放電話或線上預約。每碗拉麵皆為現點現做，敬請耐心等候。
+              </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-section-gap pb-stack-lg border-t border-secondary/20 bg-surface-container-lowest">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin max-w-container-max mx-auto">
+<div class="space-y-6">
+<h2 class="font-display-lg text-headline-md text-on-surface uppercase tracking-tighter">一丸老麵</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">以匠人之心，熬製深夜裡最溫暖的一碗靈魂老麵。</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined cursor-pointer text-on-surface-variant hover:text-secondary transition-colors">facebook</span>
+<span class="material-symbols-outlined cursor-pointer text-on-surface-variant hover:text-secondary transition-colors">camera</span>
+<span class="material-symbols-outlined cursor-pointer text-on-surface-variant hover:text-secondary transition-colors">share</span>
+</div>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-secondary uppercase mb-6 tracking-widest">Store Info</h4>
+<ul class="space-y-4">
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="store.html">門市據點</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">候位規則</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">交通資訊</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-secondary uppercase mb-6 tracking-widest">Hours</h4>
+<ul class="space-y-2 font-body-md text-body-md text-on-surface-variant">
+<li class="">週二 - 週日</li>
+<li class="">11:30 - 14:00</li>
+<li class="">17:30 - 20:00</li>
+<li class="text-secondary/60 italic mt-2">週一公休</li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-secondary uppercase mb-6 tracking-widest">Contact</h4>
+<ul class="space-y-4">
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">人才招募</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">合作洽談</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">隱私權條款</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-20 border-t border-outline-variant/10 pt-10 px-margin max-w-container-max mx-auto text-center">
+<p class="font-body-md text-body-md text-on-surface-variant/40">© 2024 Ichimaru Ramen Bar. Artisanal Excellence.</p>
+</div>
+</footer>
+<script>
+    function toggleMenu() {
+      const menu = document.getElementById('side-navbar');
+      const isHidden = menu.classList.contains('opacity-0');
+      
+      if (isHidden) {
+        menu.classList.remove('opacity-0', 'pointer-events-none');
+        menu.classList.add('opacity-100', 'pointer-events-auto', 'menu-active');
+        document.body.style.overflow = 'hidden';
+      } else {
+        menu.classList.add('opacity-0', 'pointer-events-none');
+        menu.classList.remove('opacity-100', 'pointer-events-auto', 'menu-active');
+        document.body.style.overflow = '';
+      }
+    }
+  </script>
+
+
+</body></html>
