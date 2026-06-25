@@ -144,20 +144,23 @@
 <nav class="flex flex-col items-center space-y-10 nav-stagger"><a class="group relative flex flex-col items-center" href="index.html"><span class="font-label-sm text-label-sm text-secondary opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-y-2 group-hover:translate-y-0 uppercase tracking-widest">Home</span><span class="font-headline-lg text-headline-lg text-on-surface group-hover:text-secondary transition-colors duration-300">首頁</span></a><a class="group relative flex flex-col items-center" href="about.html"><span class="font-label-sm text-label-sm text-secondary opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-y-2 group-hover:translate-y-0 uppercase tracking-widest">Story</span><span class="font-headline-lg text-headline-lg text-on-surface group-hover:text-secondary transition-colors duration-300">品牌故事</span></a><a class="group relative flex flex-col items-center" href="menu.html"><span class="font-label-sm text-label-sm text-secondary opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-y-2 group-hover:translate-y-0 uppercase tracking-widest">Menu</span><span class="font-headline-lg text-headline-lg text-on-surface group-hover:text-secondary transition-colors duration-300">菜單</span></a><a class="group relative flex flex-col items-center" href="ship.html"><span class="font-label-sm text-label-sm text-secondary opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-y-2 group-hover:translate-y-0 uppercase tracking-widest">Shipping</span><span class="font-headline-lg text-headline-lg text-on-surface group-hover:text-secondary transition-colors duration-300">冷凍宅配</span></a><a class="group relative flex flex-col items-center" href="store.html"><span class="font-label-sm text-label-sm text-secondary opacity-100 transition-all duration-300 uppercase tracking-widest">Location</span><span class="font-headline-lg text-headline-lg text-secondary">門市資訊</span></a><a class="group relative flex flex-col items-center" href="deliver.html"><span class="font-label-sm text-label-sm text-secondary opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-y-2 group-hover:translate-y-0 uppercase tracking-widest">Delivery</span><span class="font-headline-lg text-headline-lg text-on-surface group-hover:text-secondary transition-colors duration-300">外送</span></a></nav>
 </div>
 </div>
-<!-- Sticky Navbar (TopNavBar) -->
-<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl border-b border-outline-variant/10 shadow-sm transition-all duration-300 ease-in-out">
-<div class="flex justify-between items-center h-20 px-margin max-w-container-max mx-auto">
-<div class="flex items-center">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl border-b border-outline-variant/10 shadow-sm">
+<div class="flex justify-between items-center h-20 px-6 md:px-margin max-w-container-max mx-auto">
+<div class="flex items-center gap-12">
 <a class="font-display-lg text-headline-md tracking-tighter text-on-surface uppercase hover:text-secondary transition-colors" href="index.html">一丸老麵</a>
-</div>
-<nav class="hidden lg:flex gap-12">
-<a class="font-label-lg text-label-lg text-on-surface hover:text-secondary after:content-[''] after:block after:h-px after:bg-secondary after:w-0 hover:after:w-full after:transition-all after:duration-300" href="index.html">HOME</a>
-<a class="font-label-lg text-label-lg text-on-surface hover:text-secondary after:content-[''] after:block after:h-px after:bg-secondary after:w-0 hover:after:w-full after:transition-all after:duration-300" href="about.html">STORY</a>
-<a class="font-label-lg text-label-lg text-on-surface hover:text-secondary after:content-[''] after:block after:h-px after:bg-secondary after:w-0 hover:after:w-full after:transition-all after:duration-300" href="menu.html">MENU</a>
-<a class="font-label-lg text-label-lg text-secondary border-b border-secondary pb-1" href="store.html">STORE</a>
+<nav class="hidden lg:flex space-x-10 items-center h-full">
+<a class="font-label-lg text-label-lg text-secondary border-b border-secondary pb-1 tracking-widest" href="index.html">首頁</a>
+<a class="font-label-lg text-label-lg text-on-surface hover:text-secondary after:content-[&#39;&#39;] after:block after:h-px after:bg-secondary after:w-0 hover:after:w-full after:transition-all after:duration-300 transition-all duration-300 ease-in-out tracking-widest" href="about.html">品牌故事</a>
+<a class="font-label-lg text-label-lg text-on-surface hover:text-secondary after:content-[&#39;&#39;] after:block after:h-px after:bg-secondary after:w-0 hover:after:w-full after:transition-all after:duration-300 transition-all duration-300 ease-in-out tracking-widest" href="menu.html">菜單</a>
+<a class="font-label-lg text-label-lg text-on-surface hover:text-secondary after:content-[&#39;&#39;] after:block after:h-px after:bg-secondary after:w-0 hover:after:w-full after:transition-all after:duration-300 transition-all duration-300 ease-in-out tracking-widest" href="store.html">門市資訊</a>
 </nav>
-<div class="flex items-center gap-6">
-<button class="text-on-surface hover:text-secondary transition-colors" onclick="toggleMenu()">
+</div>
+<div class="flex items-center gap-4 md:gap-6">
+<button class="text-on-surface hover:text-secondary transition-colors">
+
+</button>
+<button class="text-on-surface hover:text-secondary transition-all duration-300 active:scale-90" onclick="toggleMenu()">
 <span class="material-symbols-outlined text-3xl">menu</span>
 </button>
 </div>
