@@ -174,21 +174,23 @@
 </div>
 </div>
 <!-- Sticky Navbar -->
-<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl border-b border-outline-variant/10 shadow-sm h-20">
-<div class="flex justify-between items-center h-full px-margin max-w-container-max mx-auto">
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl border-b border-outline-variant/10 shadow-sm">
+<div class="flex justify-between items-center h-20 px-6 md:px-margin max-w-container-max mx-auto">
 <div class="flex items-center gap-12">
-<a class="font-display-lg text-headline-md tracking-tighter text-on-surface" href="index.html">一丸老麵</a>
-<nav class="hidden lg:flex gap-8 h-full items-center">
-<a class="font-label-lg text-label-lg text-on-surface hover:text-secondary transition-all relative after:content-[''] after:block after:h-px after:bg-secondary after:w-0 hover:after:w-full after:transition-all after:duration-300" href="index.html">首頁</a>
-<a class="font-label-lg text-label-lg text-secondary border-b border-secondary pb-1" href="menu.html">精選菜單</a>
-<a class="font-label-lg text-label-lg text-on-surface hover:text-secondary transition-all relative after:content-[''] after:block after:h-px after:bg-secondary after:w-0 hover:after:w-full after:transition-all after:duration-300" href="#">職人限定</a>
-<a class="font-label-lg text-label-lg text-on-surface hover:text-secondary transition-all relative after:content-[''] after:block after:h-px after:bg-secondary after:w-0 hover:after:w-full after:transition-all after:duration-300" href="store.html">門市資訊</a>
+<a class="font-display-lg text-headline-md tracking-tighter text-on-surface uppercase hover:text-secondary transition-colors" href="index.html">一丸老麵</a>
+<nav class="hidden lg:flex space-x-10 items-center h-full">
+<a class="font-label-lg text-label-lg text-secondary border-b border-secondary pb-1 tracking-widest" href="index.html">首頁</a>
+<a class="font-label-lg text-label-lg text-on-surface hover:text-secondary after:content-[&#39;&#39;] after:block after:h-px after:bg-secondary after:w-0 hover:after:w-full after:transition-all after:duration-300 transition-all duration-300 ease-in-out tracking-widest" href="about.html">品牌故事</a>
+<a class="font-label-lg text-label-lg text-on-surface hover:text-secondary after:content-[&#39;&#39;] after:block after:h-px after:bg-secondary after:w-0 hover:after:w-full after:transition-all after:duration-300 transition-all duration-300 ease-in-out tracking-widest" href="menu.html">菜單</a>
+<a class="font-label-lg text-label-lg text-on-surface hover:text-secondary after:content-[&#39;&#39;] after:block after:h-px after:bg-secondary after:w-0 hover:after:w-full after:transition-all after:duration-300 transition-all duration-300 ease-in-out tracking-widest" href="store.html">門市資訊</a>
 </nav>
 </div>
-<div class="flex items-center gap-6">
-<button class="flex items-center gap-3 group" onclick="toggleMenu()">
-<span class="font-label-lg text-on-surface group-hover:text-secondary transition-colors uppercase tracking-widest hidden sm:block">Menu</span>
-<span class="material-symbols-outlined cursor-pointer text-on-surface group-hover:text-secondary transition-colors text-3xl">menu</span>
+<div class="flex items-center gap-4 md:gap-6">
+<button class="text-on-surface hover:text-secondary transition-colors">
+
+</button>
+<button class="text-on-surface hover:text-secondary transition-all duration-300 active:scale-90" onclick="toggleMenu()">
+<span class="material-symbols-outlined text-3xl">menu</span>
 </button>
 </div>
 </div>
